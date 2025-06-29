@@ -1,23 +1,15 @@
-plugins {
-    id 'com.android.application'
-}
-
-android {
-    namespace 'com.example.myapp'
-    compileSdk 34
-
-    defaultConfig {
-        applicationId "com.example.myapp"
-        minSdk 23
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.3.2'
     }
 }
-
-dependencies {}
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
